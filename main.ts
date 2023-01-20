@@ -45,7 +45,7 @@ input.onButtonPressed(Button.B, function () {
 })
 input.onGesture(Gesture.Shake, function () {
     Magic_8_Ball = randint(1, 3)
-    if (true) {
+    if (Magic_8_Ball == 1) {
         basic.showLeds(`
             . # . # .
             . # . # .
@@ -72,7 +72,7 @@ input.onGesture(Gesture.Shake, function () {
             . # # . .
             `)
         basic.clearScreen()
-    } else if (false) {
+    } else if (Magic_8_Ball == 2) {
         basic.showLeds(`
             . # # # .
             . . # . .
@@ -92,7 +92,7 @@ input.onGesture(Gesture.Shake, function () {
         basic.pause(500)
         basic.clearScreen()
         basic.showLeds(`
-            . # . . #
+            . # # # .
             . # . # .
             . # # . .
             . # . # .
@@ -118,4 +118,7 @@ input.onGesture(Gesture.Shake, function () {
             `)
         basic.clearScreen()
     }
+})
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    basic.showString("MONKESSSSSSSSSSSS")
 })
